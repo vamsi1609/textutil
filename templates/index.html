@@ -1,15 +1,60 @@
-<!DOCTYPE html>
-<html lang='en'>
-<HTML>
-   <HEAD>
-      <TITLE>Text analysis</TITLE>
-   </HEAD>
-   <BODY>
-      <h1>Welcome to the text Analyzer. Enter your text below</h1>
-      <form action='/analyze' method='get'>
-        <textarea name='text' style='margin: 0px; width: 1474px; height: 166px;'></textarea><br>
-        <input type="checkbox" name="removepunc"> Remove Punctuations </input><br>
-        <input type="checkbox" name="full capital"> Capitalize the text </input><br>
-        <button type = 'submit' > Analyze text </button>
-   </BODY>
-</HTML>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Analyze your text</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Text Analysis</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link" href="#">About this website</a>
+        <a class="nav-link" href="#">Contact us</a>
+      </div>
+    </div>
+  </div>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</nav>
+</nav>
+<form class="container-fluid" action='/analyze' method='get'>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Enter your text to get the analysis</label>
+    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" name = "removepunc" type="checkbox" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">remove punctuations</label>
+  </div>
+  <div class="form-check form-switch">
+  <input class="form-check-input" name ="full capital" type="checkbox" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">capitalize the text</label>
+</div>
+<button type="submit" class="btn btn-dark mt-2">Analyze the text</button>
+</form>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
