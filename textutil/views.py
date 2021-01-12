@@ -16,10 +16,13 @@ def about(request):
 def analyze(request):
     djtext = request.GET.get('text','default') #Input text from the website
     removepunc =  request.GET.get('removepunc','off')# remove puncuation flag
-    outtext="No analysis" #Statement to print if the removepunc flag is off
+    capitalize = request.GET.get('full capital','off')# Capitalize flag
     if removepunc == 'on':
-        outtext=rempunc(djtext)# calling the function
-    params={'purpose':'without Punctuations','analyzed_text':outtext}# dictionary for render method
+        djtext=rempunc(djtext)# calling the function
+    if capitalize == "on":
+        djtext = djtext.upper()# capitalizing the input text
+    outtext=djtext
+    params={'purpose':'','analyzed_text':outtext}# dictionary for render method
     return render(request,'analyze.html',params)
 
 def rempunc(strs):
