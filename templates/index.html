@@ -31,21 +31,24 @@
     </form>
 </nav>
 </nav>
-<form class="container-fluid" action='/analyze' method='get'>
-  <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Enter your text to get the analysis</label>
-    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+<div class="container-fluid">
+  <form  action='/analyze' method='get'>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Enter your text to get the analysis</label>
+      <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-check form-switch">
+      <input class="form-check-input" name = "removepunc" type="checkbox" id="flexSwitchCheckDefault">
+      <label class="form-check-label" for="flexSwitchCheckDefault">remove punctuations</label>
+    </div>
+    <div class="form-check form-switch">
+    <input class="form-check-input" name ="full capital" type="checkbox" id="flexSwitchCheckDefault">
+    <label class="form-check-label" for="flexSwitchCheckDefault">capitalize the text</label>
   </div>
-  <div class="form-check form-switch">
-    <input class="form-check-input" name = "removepunc" type="checkbox" id="flexSwitchCheckDefault">
-    <label class="form-check-label" for="flexSwitchCheckDefault">remove punctuations</label>
-  </div>
-  <div class="form-check form-switch">
-  <input class="form-check-input" name ="full capital" type="checkbox" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">capitalize the text</label>
+  <button type="submit" class="btn btn-dark mt-2">Analyze the text</button>
+  </form>
+
 </div>
-<button type="submit" class="btn btn-dark mt-2">Analyze the text</button>
-</form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
