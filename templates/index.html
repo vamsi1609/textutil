@@ -32,7 +32,7 @@
 </nav>
 </nav>
 <div class="container-fluid">
-  <form  action='/analyze' method='get'>
+  <form  action='/analyze' method='post'> {% csrf_token %}
     <div class="mb-3">
       <label for="exampleFormControlTextarea1" class="form-label">Enter your text to get the analysis</label>
       <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>

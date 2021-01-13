@@ -14,9 +14,9 @@ def about(request):
     return HttpResponse("About me")
 #Analyze method which uses the analyze html and return rendered output of the response
 def analyze(request):
-    djtext = request.GET.get('text','default') #Input text from the website
-    removepunc =  request.GET.get('removepunc','off')# remove puncuation flag
-    capitalize = request.GET.get('full capital','off')# Capitalize flag
+    djtext = request.POST.get('text','default') #Input text from the website
+    removepunc =  request.POST.get('removepunc','off')# remove puncuation flag
+    capitalize = request.POST.get('full capital','off')# Capitalize flag
     if removepunc == 'on':
         djtext=rempunc(djtext)# calling the function
     if capitalize == "on":
